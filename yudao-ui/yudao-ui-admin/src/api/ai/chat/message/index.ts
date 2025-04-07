@@ -3,6 +3,7 @@ import { fetchEventSource } from '@microsoft/fetch-event-source'
 import { getAccessToken } from '@/utils/auth'
 import { config } from '@/config/axios/config'
 
+// 验证
 // 聊天VO
 export interface ChatMessageVO {
   id: number // 编号
