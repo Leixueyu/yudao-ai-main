@@ -16,6 +16,7 @@
         </el-form-item>
       </el-col>
 <!--       隐藏 -->
+<!--      用户名输入框-->
       <el-col :span="24" style="padding-right: 10px; padding-left: 10px ;  display: none;" >
         <el-form-item v-if="loginData.tenantEnable === 'true'" prop="tenantName" >
           <el-input
@@ -27,6 +28,7 @@
           />
         </el-form-item>
       </el-col>
+<!--      密码输入框-->
       <el-col :span="24" style="padding-right: 10px; padding-left: 10px">
         <el-form-item prop="username">
           <el-input
@@ -36,6 +38,7 @@
           />
         </el-form-item>
       </el-col>
+<!--      记住密码和忘记密码-->
       <el-col :span="24" style="padding-right: 10px; padding-left: 10px">
         <el-form-item prop="password">
           <el-input

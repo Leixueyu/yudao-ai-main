@@ -27,6 +27,7 @@
           </TransitionGroup>
         </div>
       </div>
+
       <div
         class="relative flex-1 p-30px dark:bg-[var(--login-bg-color)] lt-sm:p-10px overflow-x-hidden overflow-y-auto"
       >
