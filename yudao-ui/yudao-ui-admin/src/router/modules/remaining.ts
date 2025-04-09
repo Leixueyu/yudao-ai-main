@@ -30,6 +30,13 @@ const { t } = useI18n()
  followAuth: '/dashboard'  跟随哪个路由进行权限过滤
 
  canTo: true               设置为true即使hidden为true，也依然可以进行路由跳转(默认 false)
+
+ component：指定该路由使用 哪个 组件进行渲染
+ name: 为该路由指定了一个名称，在路由跳转或使用路由守卫时可以通过名称来引用该路由
+ children：是一个数组，用于定义子路由
+ meta：是一个对象，用于存储路由的元信息。
+   hidden: true：表示该路由不会在侧边栏中显示，通常用于一些不需要在导航栏展示的路由，如登录页、错误页等
+   noTagsView: true：表示该路由不会出现在标签页中，避免在标签页中显示不必要的路由记录
  }
  **/
 const remainingRouter: AppRouteRecordRaw[] = [
@@ -51,7 +58,7 @@ const remainingRouter: AppRouteRecordRaw[] = [
       noTagsView: true
     }
   },
-  // 2、首页
+  // 2、首页，对应的标签会固定在标签页
   {
     path: '/',
     component: Layout,
@@ -157,6 +164,7 @@ const remainingRouter: AppRouteRecordRaw[] = [
       }
     ]
   },
+  // 6、定时任务
   {
     path: '/job',
     component: Layout,
@@ -180,6 +188,7 @@ const remainingRouter: AppRouteRecordRaw[] = [
       }
     ]
   },
+
   {
     path: '/login',
     component: () => import('@/views/Login/Login.vue'),
@@ -190,6 +199,7 @@ const remainingRouter: AppRouteRecordRaw[] = [
       noTagsView: true
     }
   },
+
   {
     path: '/sso',
     component: () => import('@/views/Login/Login.vue'),

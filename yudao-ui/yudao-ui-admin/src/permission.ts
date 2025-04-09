@@ -1,3 +1,7 @@
+/*
+* 配置 Vue 项目中的路由守卫，实现路由导航的权限控制和相关数据的加载
+* 用户登录状态的检查和权限控制，确保用户在未登录时无法访问受保护的路由
+* */
 import router from './router'
 import type { RouteRecordRaw } from 'vue-router'
 import { isRelogin } from '@/config/axios/service'

@@ -1,5 +1,7 @@
 import request from '@/config/axios'
-
+/*
+* AI绘画 API 请求函数和数据结构
+* */
 // AI 绘图 VO
 export interface ImageVO {
   id: number // 编号

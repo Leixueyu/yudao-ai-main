@@ -1,3 +1,6 @@
+/*
+* 导入了项目所需的各种模块和插件
+* */
 // 引入unocss css
 import '@/plugins/unocss'
 

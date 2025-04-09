@@ -1,3 +1,6 @@
+/*
+* 路由实例的创建、路由重置、路由的安装
+* */
 import type { App } from 'vue'
 import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHistory } from 'vue-router'
@@ -11,6 +14,7 @@ const router = createRouter({
   scrollBehavior: () => ({ left: 0, top: 0 })
 })
 
+// 重置路由
 export const resetRouter = (): void => {
   const resetWhiteNameList = ['Redirect', 'Login', 'NoFind', 'Root']
   router.getRoutes().forEach((route) => {
@@ -21,6 +25,7 @@ export const resetRouter = (): void => {
   })
 }
 
+// 安装路由
 export const setupRouter = (app: App<Element>) => {
   app.use(router)
 }
