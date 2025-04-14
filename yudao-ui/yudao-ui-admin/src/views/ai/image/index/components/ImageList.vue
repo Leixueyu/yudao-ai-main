@@ -15,6 +15,8 @@
         @on-mj-btn-click="handleImageMidjourneyButtonClick"
       />
     </div>
+
+    <!--  分页  y-->
     <div class="task-image-pagination">
       <Pagination
         :total="pageTotal"

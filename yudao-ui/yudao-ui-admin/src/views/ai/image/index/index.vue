@@ -1,10 +1,11 @@
-<!-- image -->
+<!-- image AI绘画的主页面-->
 <template>
   <div class="ai-image">
     <div class="left">
       <div class="segmented">
         <el-segmented v-model="selectPlatform" :options="platformOptions" />
       </div>
+
       <div class="modal-switch-container">
         <Dall3
           v-if="selectPlatform === AiPlatformEnum.OPENAI"
@@ -25,6 +26,9 @@
         />
       </div>
     </div>
+
+
+
     <div class="main">
       <ImageList ref="imageListRef" @on-regeneration="handleRegeneration" />
     </div>
@@ -115,7 +119,9 @@ const handleRegeneration = async (image: ImageVO) => {
       --el-border-radius-base: 16px;
       --el-segmented-item-selected-color: #fff;
       background-color: #ececec;
-      width: 350px;
+      //改一下“绘画平台”对应的宽度
+      width: 320px;
+      //width: 350px;
     }
 
     .modal-switch-container {

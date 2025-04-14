@@ -1,3 +1,5 @@
+<!--控制台 绘画管理-->
+
 <template>
   <ContentWrap>
     <!-- 搜索工作栏 -->
@@ -23,16 +25,20 @@
           />
         </el-select>
       </el-form-item>
-      <el-form-item label="平台" prop="platform">
-        <el-select v-model="queryParams.status" placeholder="请选择平台" clearable class="!w-240px">
-          <el-option
-            v-for="dict in getStrDictOptions(DICT_TYPE.AI_PLATFORM)"
-            :key="dict.value"
-            :label="dict.label"
-            :value="dict.value"
-          />
-        </el-select>
-      </el-form-item>
+
+      <!-- 移除平台搜索条件 -->
+<!--      <el-form-item label="平台" prop="platform">-->
+<!--        <el-select v-model="queryParams.status" placeholder="请选择平台" clearable class="!w-240px">-->
+<!--          <el-option-->
+<!--            v-for="dict in getStrDictOptions(DICT_TYPE.AI_PLATFORM)"-->
+<!--            :key="dict.value"-->
+<!--            :label="dict.label"-->
+<!--            :value="dict.value"-->
+<!--          />-->
+<!--        </el-select>-->
+<!--      </el-form-item>-->
+
+
       <el-form-item label="绘画状态" prop="status">
         <el-select
           v-model="queryParams.status"
@@ -103,12 +109,17 @@
           <span>{{ userList.find((item) => item.id === scope.row.userId)?.nickname }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="平台" align="center" prop="platform" width="120">
-        <template #default="scope">
-          <dict-tag :type="DICT_TYPE.AI_PLATFORM" :value="scope.row.platform" />
-        </template>
-      </el-table-column>
-      <el-table-column label="模型" align="center" prop="model" width="180" />
+
+
+      <!-- 移除平台和模型表格列 -->
+<!--      <el-table-column label="平台" align="center" prop="platform" width="120">-->
+<!--        <template #default="scope">-->
+<!--          <dict-tag :type="DICT_TYPE.AI_PLATFORM" :value="scope.row.platform" />-->
+<!--        </template>-->
+<!--      </el-table-column>-->
+<!--      <el-table-column label="模型" align="center" prop="model" width="180" />-->
+
+
       <el-table-column label="绘画状态" align="center" prop="status" width="100">
         <template #default="scope">
           <dict-tag :type="DICT_TYPE.AI_IMAGE_STATUS" :value="scope.row.status" />

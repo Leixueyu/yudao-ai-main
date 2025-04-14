@@ -2,7 +2,9 @@
 <template>
   <div class="prompt">
     <el-text tag="b">画面描述</el-text>
-    <el-text tag="p">建议使用“形容词+动词+风格”的格式，使用“，”隔开</el-text>
+<!--    修改一下-->
+    <el-text tag="p">建议使用”形容词+名词+风格“的格式，使用“，”隔开</el-text>
+<!--    <el-text tag="p">建议使用“形容词+动词+风格”的格式，使用“，”隔开</el-text>-->
     <el-input
       v-model="prompt"
       maxlength="1024"
@@ -31,37 +33,45 @@
       </el-button>
     </el-space>
   </div>
-  <div class="group-item">
-    <div>
-      <el-text tag="b">平台</el-text>
-    </div>
-    <el-space wrap class="group-item-body">
-      <el-select
-        v-model="otherPlatform"
-        placeholder="Select"
-        size="large"
-        class="!w-350px"
-        @change="handlerPlatformChange"
-      >
-        <el-option
-          v-for="item in OtherPlatformEnum"
-          :key="item.key"
-          :label="item.name"
-          :value="item.key"
-        />
-      </el-select>
-    </el-space>
-  </div>
-  <div class="group-item">
-    <div>
-      <el-text tag="b">模型</el-text>
-    </div>
-    <el-space wrap class="group-item-body">
-      <el-select v-model="model" placeholder="Select" size="large" class="!w-350px">
-        <el-option v-for="item in models" :key="item.key" :label="item.name" :value="item.key" />
-      </el-select>
-    </el-space>
-  </div>
+
+
+<!--  删除平台和模型-->
+
+<!--  <div class="group-item">-->
+<!--    <div>-->
+<!--      <el-text tag="b">平台</el-text>-->
+<!--    </div>-->
+<!--    <el-space wrap class="group-item-body">-->
+<!--      <el-select-->
+<!--        v-model="otherPlatform"-->
+<!--        placeholder="Select"-->
+<!--        size="large"-->
+<!--        class="!w-350px"-->
+<!--        @change="handlerPlatformChange"-->
+<!--      >-->
+<!--        <el-option-->
+<!--          v-for="item in OtherPlatformEnum"-->
+<!--          :key="item.key"-->
+<!--          :label="item.name"-->
+<!--          :value="item.key"-->
+<!--        />-->
+<!--      </el-select>-->
+<!--    </el-space>-->
+<!--  </div>-->
+
+
+<!--  <div class="group-item">-->
+<!--    <div>-->
+<!--      <el-text tag="b">模型</el-text>-->
+<!--    </div>-->
+<!--    <el-space wrap class="group-item-body">-->
+<!--      <el-select v-model="model" placeholder="Select" size="large" class="!w-350px">-->
+<!--        <el-option v-for="item in models" :key="item.key" :label="item.name" :value="item.key" />-->
+<!--      </el-select>-->
+<!--    </el-space>-->
+<!--  </div>-->
+
+
   <div class="group-item">
     <div>
       <el-text tag="b">图片尺寸</el-text>

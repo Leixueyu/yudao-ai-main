@@ -73,7 +73,7 @@ export const AiWriteTypeTableRender = {
 // ========== 【图片 UI】相关的枚举 ==========
 
 export const ImageHotWords = [
-  '中国旗袍',
+  '一棵小树',
   '古装美女',
   '卡通头像',
   '机甲战士',

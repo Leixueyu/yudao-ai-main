@@ -24,11 +24,16 @@
         <div>生成时间：{{ formatTime(detail.finishTime, 'yyyy-MM-dd HH:mm:ss') }}</div>
       </div>
     </div>
+
+
+    <!--  模型就不展示了  -->
     <!-- 模型 -->
-    <div class="item">
-      <div class="tip">模型</div>
-      <div class="body"> {{ detail.model }}({{ detail.height }}x{{ detail.width }}) </div>
-    </div>
+<!--    <div class="item">-->
+<!--      <div class="tip">模型</div>-->
+<!--      <div class="body"> {{ detail.model }}({{ detail.height }}x{{ detail.width }}) </div>-->
+<!--    </div>-->
+
+
     <!-- 提示词 -->
     <div class="item">
       <div class="tip">提示词</div>
